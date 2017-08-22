@@ -1,5 +1,7 @@
 # dfr
 
+[![Build Status](https://travis-ci.org/Jille/dfr.png)](https://travis-ci.org/Jille/dfr)
+
 dfr is a library to make defers more powerful. Usage is simple:
 
 ```
