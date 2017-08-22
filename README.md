@@ -62,7 +62,7 @@ func() {
 	if y == 6 {
 		return
 	}
-	unlock()
+	unlock(true)
 	doALotOfWorkOutsideTheLock()
 }
 ```
@@ -89,7 +89,7 @@ func() {
 		mtx.Lock()
 		unlock := d.Add(mtx.Unlock)
 		doSomethingThatMightPanic()
-		unlock()
+		unlock(true)
 	}
 }
 ```
