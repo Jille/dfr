@@ -2,8 +2,8 @@ package dfr
 
 import (
 	"errors"
-	"testing"
 	"strings"
+	"testing"
 )
 
 var (

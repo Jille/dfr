@@ -4,13 +4,13 @@ import (
 	"github.com/Jille/errchain"
 )
 
-type D struct{
+type D struct {
 	defers []func() error
 }
 
 func (d *D) AddErr(cb func() error) func(bool) error {
 	d.defers = append(d.defers, cb)
-	idx := len(d.defers)-1
+	idx := len(d.defers) - 1
 	return func(ex bool) error {
 		defer func() {
 			d.defers[idx] = nil
